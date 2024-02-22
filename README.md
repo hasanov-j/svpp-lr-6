@@ -27,15 +27,15 @@
 
 Запуск вычисления в отдельном потоке
 
-![](images/task/4.1.1.png)
+![](images/task/4.1.1.PNG)
 
 Реализация метода Calculate:
 
-![](images/task/4.1.2.png)
+![](images/task/4.1.2.PNG)
 
 Если доступен .NET версии 4.5 и выше, можно реализовать асинхронные операции следующим образом:
 
-![](images/task/4.1.3.png)
+![](images/task/4.1.3.PNG)
 
 Реализация метода CalculateAsync:
 
@@ -58,7 +58,7 @@ private Task CalculateAsync() {
     });
 }
  ```
-![](images/task/4.1.4.png)
+![](images/task/4.1.4.PNG)
 
 В коде окна подключите пространство имен System.ComponentModel, опишите переменнную типа BackgroundWorker и в конструкторе окна проинициализируйте ее данными из ресурса окна:
 
@@ -73,7 +73,7 @@ public MainWindow()
 
 В обработчик события backgroundWorker_DoWork поместите код вычисления интеграла. Внутри кода нужно сгенерировать событие ProgressChanged для управления элементом ProgressBar. Для этого используется метод backgroundWorker.ReportProgress(int progress):
 
-![](images/task/4.1.5.png)
+![](images/task/4.1.5.PNG)
 
 В обработчик события backgroundWorker_ProgressChanged поместите код, управляющий показаниями элемента ProgressBar. Используйте свойство аргумента события e.ProgressPercentage.
 
@@ -161,5 +161,5 @@ listBox.Items.Add($"x = {trio.Item1:0.00} S = {trio.Item2:0.00000}"); pBar.Value
 
 Далее при нажатии на отсальные кнопки пользователь получается расчет интеграла синхронно и асинхронно, с помощью метода прямоугольников:
 
-![](images/results/processing.PNG)
-![](images/results/result.PNG)
+![](images/results/processing.png)
+![](images/results/result.png)
